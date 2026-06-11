@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #d9d9d9;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #d9d9d9;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.application.controllers.dashboard.tools.check.EditItem">
     <children>
         <VBox prefHeight="600.0" prefWidth="800.0">
             <children>
@@ -37,7 +37,7 @@
                                         <Insets bottom="3.0" left="2.0" />
                                     </VBox.margin>
                                 </Label>
-                                <TextField style="-fx-border-color: black;" />
+                                <TextField fx:id="nome" style="-fx-border-color: black;" />
                                 <Label text="Valor unitário do produto">
                                     <VBox.margin>
                                         <Insets bottom="3.0" left="2.0" top="10.0" />
@@ -46,7 +46,7 @@
                                         <Font name="Droid Sans Bold" size="12.0" />
                                     </font>
                                 </Label>
-                                <TextField style="-fx-border-color: black;" />
+                                <TextField fx:id="valor" style="-fx-border-color: black;" />
                                 <Label disable="true" text="Código do produto">
                                     <VBox.margin>
                                         <Insets bottom="3.0" left="2.0" top="10.0" />
@@ -55,7 +55,7 @@
                                         <Font name="Droid Sans Bold" size="12.0" />
                                     </font>
                                 </Label>
-                                <TextField disable="true" style="-fx-border-color: black;" />
+                                <TextField fx:id="codigo" disable="true" style="-fx-border-color: black;" />
                             </children>
                             <HBox.margin>
                                 <Insets left="30.0" top="25.0" />
@@ -68,7 +68,7 @@
                                         <Insets bottom="25.0" right="30.0" top="44.0" />
                                     </HBox.margin>
                                     <children>
-                                        <Button mnemonicParsing="false" prefWidth="250.0" style="-fx-border-color: black;" text="Salvar e sair">
+                                        <Button mnemonicParsing="false" onAction="#salvarESair" prefWidth="250.0" style="-fx-border-color: black;" text="Salvar e sair">
                                             <VBox.margin>
                                                 <Insets />
                                             </VBox.margin>
@@ -79,7 +79,7 @@
                                                 <Insets bottom="5.0" top="5.0" />
                                             </padding>
                                         </Button>
-                                        <Button mnemonicParsing="false" prefWidth="250.0" style="-fx-border-color: black;" text="Sair">
+                                        <Button mnemonicParsing="false" onAction="#sair" prefWidth="250.0" style="-fx-border-color: black;" text="Sair">
                                             <VBox.margin>
                                                 <Insets top="10.0" />
                                             </VBox.margin>
@@ -90,7 +90,7 @@
                                                 <Insets bottom="5.0" top="5.0" />
                                             </padding>
                                         </Button>
-                                        <VBox alignment="BOTTOM_LEFT" prefHeight="405.0" prefWidth="100.0">
+                                        <VBox fx:id="erroContainer" alignment="BOTTOM_LEFT" prefHeight="405.0" prefWidth="100.0" visible="false">
                                             <children>
                                                 <Label text="Erro" textFill="#e10c0c">
                                                     <font>
@@ -102,7 +102,7 @@
                                                 </Label>
                                                 <HBox alignment="CENTER" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #eaeaea;">
                                                     <children>
-                                                        <Label alignment="CENTER" maxWidth="-Infinity" prefWidth="200.0" text="Problema" textAlignment="CENTER" textFill="#e10c0c">
+                                                        <Label fx:id="erroMessage" alignment="CENTER" maxWidth="-Infinity" prefWidth="200.0" text="Problema" textAlignment="CENTER" textFill="#e10c0c">
                                                             <font>
                                                                 <Font name="Droid Sans Bold" size="14.0" />
                                                             </font>

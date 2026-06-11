@@ -13,8 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #d9d9d9;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #d9d9d9;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.application.controllers.dashboard.tools.check.Check">
    <children>
       <VBox prefHeight="600.0" prefWidth="800.0">
          <children>
@@ -39,8 +38,8 @@
                      <children>
                         <HBox prefWidth="450.0">
                            <children>
-                              <TextField prefWidth="345.0" style="-fx-border-color: black;" />
-                              <Button mnemonicParsing="false" prefWidth="100.0" style="-fx-border-color: black;" text="Pesquisar">
+                              <TextField fx:id="campoPesquisar" prefWidth="345.0" style="-fx-border-color: black;" />
+                              <Button mnemonicParsing="false" onAction="#pesquisar" prefWidth="100.0" style="-fx-border-color: black;" text="Pesquisar">
                                  <font>
                                     <Font name="Droid Sans Bold" size="14.0" />
                                  </font>
@@ -52,7 +51,7 @@
                         </HBox>
                         <HBox alignment="CENTER_RIGHT" prefWidth="290.0">
                            <children>
-                              <Button mnemonicParsing="false" prefWidth="100.0" style="-fx-border-color: black;" text="Sair">
+                              <Button mnemonicParsing="false" onAction="#sair" prefWidth="100.0" style="-fx-border-color: black;" text="Sair">
                                  <font>
                                     <Font name="Droid Sans Bold" size="14.0" />
                                  </font>
@@ -120,7 +119,7 @@
                               <Insets top="5.0" />
                            </VBox.margin>
                            <content>
-                              <GridPane hgap="4.0" prefWidth="726.0" vgap="4.0">
+                              <GridPane fx:id="gridPane" hgap="4.0" prefWidth="726.0" vgap="4.0">
                                 <columnConstraints>
                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

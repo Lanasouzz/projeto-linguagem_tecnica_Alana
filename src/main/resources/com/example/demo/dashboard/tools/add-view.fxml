@@ -117,7 +117,7 @@
                                     <Insets top="10.0" />
                                  </VBox.margin>
                               </Button>
-                              <VBox alignment="BOTTOM_LEFT" prefHeight="392.0" prefWidth="100.0">
+                              <VBox fx:id="erroContainer" alignment="BOTTOM_LEFT" prefHeight="392.0" prefWidth="100.0" visible="false">
                                  <children>
                                     <Label text="Erro" textFill="#e10c0c">
                                        <VBox.margin>
@@ -129,7 +129,7 @@
                                     </Label>
                                     <HBox alignment="CENTER" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #eaeaea;">
                                        <children>
-                                          <Label alignment="CENTER" prefWidth="200.0" text="Problema" textAlignment="CENTER" textFill="#e10c0c">
+                                          <Label fx:id="erroMessage" alignment="CENTER" prefWidth="200.0" text="Problema" textAlignment="CENTER" textFill="#e10c0c">
                                              <font>
                                                 <Font name="Droid Sans Bold" size="14.0" />
                                              </font>
