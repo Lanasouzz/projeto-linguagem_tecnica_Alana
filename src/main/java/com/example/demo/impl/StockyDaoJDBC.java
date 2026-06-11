@@ -43,4 +43,10 @@ public class StockyDaoJDBC implements StockyDao {
         // Deve retornar uma lista com todos os produtos do estoque.
         // implemente esse método a partir da interface.
     }
+
+    public void createStocky(){
+        // Faça um método que verifica se o estoque (tabela) já foi criado no banco de dados atual.
+        // Caso o estoque ainda não exista, crie a tabela do estoque e adicione alguns produtos.
+        // Vamos testar o sistema em diferentes computadores, então é bom que sempre que o código for executado em uma nova máquina o estoque já esteja minimamente estruturado.
+    }
 }
