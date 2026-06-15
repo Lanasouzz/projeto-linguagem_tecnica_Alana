@@ -1,4 +1,5 @@
 module com.example.demo {
+    requires java.sql;
     requires javafx.controls;
     requires javafx.fxml;
 
